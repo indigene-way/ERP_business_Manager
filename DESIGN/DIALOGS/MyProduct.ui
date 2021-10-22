@@ -204,7 +204,7 @@ QPushButton:focus{color:#00ea00}</string>
          <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #2f4f4f  ; border-radius: 0.5px; text-align:center;padding-left:10px;}</string>
         </property>
         <property name="text">
-         <string>Mes produits</string>
+         <string>Mes Articles</string>
         </property>
         <property name="icon">
          <iconset>
@@ -308,12 +308,12 @@ QPushButton:focus{color:#00ea00}</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton{background-color:white; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:#a4a5a7;border: 0px solid #ecf0f5}
+         <string notr="true">QPushButton{background-color:white; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{background-color:white;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
         </property>
         <property name="text">
-         <string>Mes produits</string>
+         <string>Mes Articles</string>
         </property>
         <property name="icon">
          <iconset>

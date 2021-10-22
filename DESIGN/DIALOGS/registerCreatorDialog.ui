@@ -146,7 +146,7 @@ border: 1px solid  #808080;}</string>
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>130</y>
+       <y>110</y>
        <width>161</width>
        <height>30</height>
       </rect>
@@ -179,7 +179,7 @@ border: 1px solid  #808080;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>180</y>
+       <y>150</y>
        <width>201</width>
        <height>30</height>
       </rect>
@@ -199,7 +199,7 @@ border: 1px solid  #808080;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>130</y>
+       <y>110</y>
        <width>201</width>
        <height>30</height>
       </rect>
@@ -219,7 +219,7 @@ border: 1px solid  #808080;</string>
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>180</y>
+       <y>150</y>
        <width>161</width>
        <height>30</height>
       </rect>
@@ -232,7 +232,7 @@ border: 1px solid  #808080;</string>
      <property name="geometry">
       <rect>
        <x>80</x>
-       <y>80</y>
+       <y>70</y>
        <width>161</width>
        <height>30</height>
       </rect>
@@ -245,7 +245,7 @@ border: 1px solid  #808080;</string>
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>80</y>
+       <y>70</y>
        <width>201</width>
        <height>30</height>
       </rect>
@@ -271,7 +271,7 @@ border: 1px solid  #808080;</string>
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>80</y>
+       <y>70</y>
        <width>30</width>
        <height>30</height>
       </rect>
@@ -324,52 +324,6 @@ QPushButton:focus{color:#00ea00}</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="registerPrint">
-     <property name="geometry">
-      <rect>
-       <x>470</x>
-       <y>230</y>
-       <width>41</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="toolTip">
-      <string>imprimer les évenements caisse...</string>
-     </property>
-     <property name="statusTip">
-      <string/>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:white; color : white; border: 0px solid #000028 ;  text-align:center}
-QPushButton:hover{background-color:#f9fafc;color:#a4a5a7;border: 0px solid #ecf0f5}
-QPushButton:focus{color:#00ea00}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../IMAGES/Icons/window (2).png</normaloff>../../IMAGES/Icons/window (2).png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>29</height>
-      </size>
-     </property>
-    </widget>
     <widget class="QPushButton" name="editInit_2">
      <property name="geometry">
       <rect>
@@ -397,7 +351,7 @@ QPushButton:focus{color:#00ea00}</string>
       </font>
      </property>
      <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -425,7 +379,7 @@ QPushButton:focus{color:#00ea00}</string>
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>130</y>
+       <y>110</y>
        <width>30</width>
        <height>30</height>
       </rect>
@@ -448,7 +402,7 @@ QPushButton:focus{color:#00ea00}</string>
       </font>
      </property>
      <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -476,7 +430,7 @@ QPushButton:focus{color:#00ea00}</string>
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>180</y>
+       <y>150</y>
        <width>30</width>
        <height>30</height>
       </rect>
@@ -499,7 +453,142 @@ QPushButton:focus{color:#00ea00}</string>
       </font>
      </property>
      <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{background-color:white; color : #3c80e5; border: 0px solid #000028 ;  text-align:left; padding-left:5px;}</string>
+     </property>
+     <property name="text">
+      <string>DA</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="editInit_5">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>190</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>8</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{background-color:white; color : #3c80e5; border: 0px solid #000028 ;  text-align:left; padding-left:5px;}</string>
+     </property>
+     <property name="text">
+      <string>DA</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="remiseTot">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>190</y>
+       <width>201</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:black;
+border: 1px solid  #808080;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>190</y>
+       <width>161</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tot.Remises</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="editInit_6">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>230</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>8</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -824,46 +913,106 @@ border: 1px solid  #808080;
    <widget class="QPushButton" name="Menu_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>571</width>
-      <height>101</height>
+      <x>80</x>
+      <y>30</y>
+      <width>341</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI</family>
-      <pointsize>16</pointsize>
+      <pointsize>12</pointsize>
       <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #2f4f4f  ; border-radius: 0.5px; text-align:center;}</string>
+     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #2f4f4f  ; border-radius: 0.5px; text-align:left;}</string>
     </property>
     <property name="text">
-     <string>Evenements de caisse</string>
+     <string>Mouvements de caisse, Dépots et Dépenses</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../IMAGES/Icons/window (1).png</normaloff>../../IMAGES/Icons/window (1).png</iconset>
+      <normaloff>../../IMAGES/Icons/registerCash.png</normaloff>../../IMAGES/Icons/registerCash.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>18</width>
-      <height>18</height>
+      <width>21</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="registerPrint">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>121</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Imprimer ue fiche détaillée</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{color:orange;}
+QPushButton:focus{color:#00ea00}
+</string>
+    </property>
+    <property name="text">
+     <string>Fiche de caisse</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../IMAGES/Icons/printCaisse.png</normaloff>../../IMAGES/Icons/printCaisse.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>21</width>
+      <height>21</height>
      </size>
     </property>
    </widget>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>Menu_2</tabstop>
   <tabstop>registertabWidget</tabstop>
+  <tabstop>editInit_2</tabstop>
   <tabstop>sumInit</tabstop>
   <tabstop>editInit</tabstop>
-  <tabstop>registerPrint</tabstop>
+  <tabstop>editInit_3</tabstop>
+  <tabstop>editInit_4</tabstop>
+  <tabstop>editInit_5</tabstop>
   <tabstop>depTypeCmbBox</tabstop>
   <tabstop>depVal</tabstop>
   <tabstop>depDesc</tabstop>

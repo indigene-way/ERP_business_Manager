@@ -192,10 +192,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>0</x>
       <y>125</y>
-      <width>925</width>
-      <height>500</height>
+      <width>1371</width>
+      <height>631</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -210,14 +210,14 @@
     <widget class="QFrame" name="frame_2">
      <property name="geometry">
       <rect>
-       <x>207</x>
+       <x>440</x>
        <y>65</y>
        <width>511</width>
        <height>366</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:white;</string>
+      <string notr="true">background:white; border :1px solid silver</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -229,7 +229,7 @@
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>105</y>
+        <y>140</y>
         <width>300</width>
         <height>45</height>
        </rect>
@@ -263,7 +263,7 @@
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>50</y>
+        <y>85</y>
         <width>300</width>
         <height>45</height>
        </rect>
@@ -294,7 +294,7 @@
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>50</y>
+        <y>85</y>
         <width>45</width>
         <height>45</height>
        </rect>
@@ -320,7 +320,7 @@
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>105</y>
+        <y>140</y>
         <width>45</width>
         <height>45</height>
        </rect>
@@ -584,53 +584,108 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
       <property name="geometry">
        <rect>
         <x>80</x>
-        <y>165</y>
+        <y>60</y>
         <width>351</width>
         <height>16</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:red;</string>
+       <string notr="true">color:red; border:0px</string>
       </property>
       <property name="text">
        <string/>
       </property>
      </widget>
-    </widget>
-    <widget class="QLabel" name="title_21">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>925</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI Semibold</family>
-       <pointsize>11</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:#c5c6c8;</string>
-     </property>
-     <property name="text">
-      <string>Connexion au système</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
+     <widget class="QLabel" name="title_21">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>511</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>11</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:#c5c6c8;</string>
+      </property>
+      <property name="text">
+       <string>Connexion au système</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="viewPW">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>154</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>Changer de compte</string>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{background-color:white; border:0px;}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../IMAGES/Icons/veiwPW.png</normaloff>../../IMAGES/Icons/veiwPW.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>21</width>
+        <height>16</height>
+       </size>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QFrame" name="frame_12">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>0</x>
       <y>25</y>
-      <width>925</width>
+      <width>1371</width>
       <height>100</height>
      </rect>
     </property>
@@ -648,6 +703,119 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QPushButton" name="who_2">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>30</y>
+       <width>301</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI Historic</family>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <italic>true</italic>
+       <bold>false</bold>
+       <underline>false</underline>
+       <kerning>false</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>Valider</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+</string>
+     </property>
+     <property name="text">
+      <string>Idenentification : My Business Manger</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../IMAGES/Icons/userConn.png</normaloff>../../IMAGES/Icons/userConn.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="powerOff">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>30</y>
+       <width>141</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>8</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string>Changer de compte</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{background-color:#3c80e5;color:white;border: 0px solid #ecf0f5}
+QPushButton:focus{color:#00ea00}</string>
+     </property>
+     <property name="text">
+      <string>Fermer la session</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../IMAGES/Icons/off.png</normaloff>../../IMAGES/Icons/off.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

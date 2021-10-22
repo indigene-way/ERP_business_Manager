@@ -268,6 +268,13 @@ class MessageFactory():
 		msg.setIcon(QMessageBox.Warning)
 		msg.setWindowTitle("Warning !")
 		msg.setText(str(erreur))
+		msg.exec_()	
+        
+	def raiseNoRight(self):
+		msg = QMessageBox()
+		msg.setIcon(QMessageBox.Information)
+		msg.setWindowTitle("Droits d'acces refusé !")
+		msg.setText("Accéss à la section refusé !")
 		msg.exec_()
 		
 	def raiseStockAlert(self,stock):
@@ -384,7 +391,6 @@ class SettingCreatorDialog(QDialog, Ui_SettingCreatorDialog):#CONFIRM : VALID DI
 		
 		self.settingInfo.clicked.connect(self.settingSlot)
 		
-		self.setOK.clicked.connect(self.settingSlot)
 		self.setAnnuler.clicked.connect(self.settingSlot)
 		
 	def settingSlot(self):
@@ -402,11 +408,7 @@ class SettingCreatorDialog(QDialog, Ui_SettingCreatorDialog):#CONFIRM : VALID DI
 		
 		if self.sender() == self.settingInfo :
 			self.socityInfo()
-			self.selection()		
-		
-		if self.sender() == self.setOK :
 			self.selection()	
-			self.close()
 		
 		if self.sender() == self.setAnnuler :	
 			self.close()
@@ -538,6 +540,8 @@ class ConnectDialog(QDialog, Ui_ConnectDialog):#CONFIRM : VALID DIALOG ON VLDBut
 		self.userPassword.textChanged.connect(self.Texter)
 		
 		self.disconnect.clicked.connect(self.connSlot)
+		self.viewPW.pressed.connect(self.ViewPW)
+		self.viewPW.released.connect(self.HidePW)
 	
 	def Texter(self):
 		self.label.setText("")
@@ -572,7 +576,11 @@ class ConnectDialog(QDialog, Ui_ConnectDialog):#CONFIRM : VALID DIALOG ON VLDBut
 					self.label.setText("Identification impossible, veuillez réessayer.")
 				j+=1
 				i+=1	
-
+		
+	def ViewPW(self):
+		self.userPassword.setEchoMode(QLineEdit.EchoMode.Normal)
+	def HidePW(self):
+		self.userPassword.setEchoMode(QLineEdit.EchoMode.Password)
 # =============PRODUCTCREATOR DIALOG		
 qtProdDialog= "DESIGN/DIALOGS/ProductCreatorDialog.ui"
 Ui_ProductCreatorDialog, QtBaseClass = uic.loadUiType(qtProdDialog)	
@@ -956,8 +964,8 @@ class AlertP (QDialog,Ui_AlertP):
 		today=datetime.datetime.today().date()
 		for x in fetch:
 			date_1 = datetime.datetime.strptime(x[1], "%d/%m/%Y").date()
-			end_date = date_1 + datetime.timedelta(days=-20)
-			if today  >= end_date and today < date_1:
+			end_date = date_1 + datetime.timedelta(days=-30)
+			if today  >= end_date :
 				self.string = 'Il reste moin de 20 jours avant la date de peremption de {0} : {1}\n\n'.format(x[0],x[1])
 				self.textEdit.append(self.string)
 
@@ -1151,7 +1159,7 @@ class Receipt(QDialog,Ui_Receipt):
 		
 		self.selectDate.clicked.connect(self.DateFinder)
 		self.today.clicked.connect(self.MyProdInit)
-		self.discount.clicked.connect(self.MyDiscInit)
+		self.profit.clicked.connect(self.MyDiscInit)
 		
 	def MyProdInit(self):
 		self.dater.setDisplayFormat("yyyy-MM-dd")
@@ -1268,10 +1276,8 @@ class RegisterCreatorDialog(QDialog, Ui_registerCreatorDialog):# EDIT : MODIF Pr
 		self.registerSignal()
 		self.registerSum()#somme actuel en caisse
 		self.INTEGERS()#somme actuel en caisse
-		self.regTotal = []#sum in register
-		
-		#===========METHODES
-		
+		self.regTotal = []#sum in register	
+		#===========METHODES		
 	def INTEGERS(self):
 		
 		self.sumInit.textChanged.connect(self.Regex)
@@ -1281,9 +1287,6 @@ class RegisterCreatorDialog(QDialog, Ui_registerCreatorDialog):# EDIT : MODIF Pr
 	def Regex(self):
 		try:
 			sender = self.sender()
-			if sender.text() != "" and sender.text() != '0':
-				mod = int(sender.text()) % int(sender.text()) 
-			# if not re.match("^[0-9]", self.newProdPriceBC.text()) and self.newProdPriceBC.text() != "":
 			pattern = re.compile("^[1-9]")
 			status = re.search(pattern, sender.text())
 			if not status and sender.text() != "":
@@ -1291,68 +1294,75 @@ class RegisterCreatorDialog(QDialog, Ui_registerCreatorDialog):# EDIT : MODIF Pr
 				sender.setValidator(self.onlyInt)
 				sender.setText("")
 				self.messageFactory.raiseNoInt()
-			elif sender.text() == "0" :
-				sender.setText("")
-				self.messageFactory.raiseNoInt()
 		except:
 			sender.setText("")
 			self.messageFactory.raiseNoInt()
 
 	def registerSum(self):#Selection of ADDS & Depots, binding REGISTER DATA, SETTEXT TO LABELS
-		try:
-			self.regTotal = []#sum in register
-			#SELECTION FROM Register
-			query.execute("SELECT register_recette_total FROM Register WHERE register_date = '"+self.Date+"'")
-			self.recette = str(query.fetchone()).strip("(',')")	
-			self.regTotal.append(int(self.recette))
+		# try:
+		self.regTotal = []#sum in register
+        #SELECTION FROM Register
+		query.execute("SELECT register_recette_total FROM Register WHERE register_date = '"+self.Date+"'")
+		self.recette = str(query.fetchone()).strip("(',')")	
+		self.regTotal.append(int(self.recette))
+        
+		query.execute("SELECT register_sum_init FROM Register ORDER BY id DESC")
+		self.suminit = str(query.fetchone()).strip("(',')")
+		self.regTotal.append(int(self.suminit))
+        
+		query.execute("SELECT register_depense_total FROM Register WHERE register_date = '"+self.Date+"'")
+		self.depense = str(query.fetchone()).strip("(',')")
+        
+		query.execute("SELECT disc_value FROM Discount WHERE disc_date = '"+self.Date+"'")
+		self.discount = query.fetchall()
+		discountTot = []
+		for disc in self.discount :
+			discountTot.append(int(str(disc).strip("(',')")))
+            
+		self.discTot = str(sum(discountTot))
+        
+        #BINDING DATA ON REGISTER (DEP,ADD)
+        #BINDING DATA ON REGISTER DEPENCE
+		self.dep = []
+		query.execute("SELECT dep_value FROM Register_dep WHERE dep_date = '"+self.Date+"'")
+		self.depensesList = []
+		self.depensesList = query.fetchall()
+		i=0
+		for dep in self.depensesList :	
+			self.dep.append(str(dep).strip("(',')"))
+			self.dep[i] = int(self.dep[i])
+			i+=1
+		query.execute("UPDATE Register SET register_depense_total = "+str(sum(self.dep))+" WHERE register_date ='"+self.Date+"'")
+    
+        #BINDING DATA ON REGISTER ADD
+		self.add = []
+		query.execute("SELECT add_value FROM Register_add WHERE add_date = '"+self.Date+"'")
+		self.addList = []
+		self.addList = query.fetchall()
+		i=0
+		for add in self.addList :	
+			self.add.append(str(add).strip("(',')"))
+			self.add[i] = int(self.add[i])
+			i+=1
+		query.execute("UPDATE Register SET register_ajout_total = "+str(sum(self.add))+" WHERE register_date ='"+self.Date+"'")   
+		conn.commit()
+        
+		query.execute("SELECT register_ajout_total FROM Register WHERE register_date = '"+self.Date+"'")
+		self.ajout = str(query.fetchone()).strip("(',')")
+		self.regTotal.append(int(self.ajout))
+        
+		self.sumInit.setText(self.suminit)
+		self.sumDay.setText(str(self.recette))
+		self.sumDep.setText(self.depense)
+		self.sumAdd.setText(str(self.ajout))
+		self.remiseTot.setText(str(self.discTot))
+        
+		self.sumTotal.display(sum(self.regTotal) - int(self.depense))
+		self.actual = str(sum(self.regTotal) - int(self.depense))
+		self.actual = str(self.actual)	
 			
-			query.execute("SELECT register_sum_init FROM Register ORDER BY id DESC")
-			self.suminit = str(query.fetchone()).strip("(',')")
-			self.regTotal.append(int(self.suminit))
-			
-			query.execute("SELECT register_depense_total FROM Register WHERE register_date = '"+self.Date+"'")
-			self.depense = str(query.fetchone()).strip("(',')")
-			
-			#BINDING DATA ON REGISTER (DEP,ADD)
-			self.dep = []
-			query.execute("SELECT dep_value FROM Register_dep WHERE dep_date = '"+self.Date+"'")
-			self.depensesList = []
-			self.depensesList = query.fetchall()
-			i=0
-			for dep in self.depensesList :	
-				self.dep.append(str(dep).strip("(',')"))
-				self.dep[i] = int(self.dep[i])
-				i+=1
-			query.execute("UPDATE Register SET register_depense_total = "+str(sum(self.dep))+" WHERE register_date ='"+self.Date+"'")
-		
-			self.add = []
-			query.execute("SELECT add_value FROM Register_add WHERE add_date = '"+self.Date+"'")
-			self.addList = []
-			self.addList = query.fetchall()
-			i=0
-			for add in self.addList :	
-				self.add.append(str(add).strip("(',')"))
-				self.add[i] = int(self.add[i])
-				i+=1
-			query.execute("UPDATE Register SET register_ajout_total = "+str(sum(self.add))+" WHERE register_date ='"+self.Date+"'")
-			
-			conn.commit()
-			
-			query.execute("SELECT register_ajout_total FROM Register WHERE register_date = '"+self.Date+"'")
-			self.ajout = str(query.fetchone()).strip("(',')")
-			self.regTotal.append(int(self.ajout))
-			
-			self.sumInit.setText(self.suminit)
-			self.sumDay.setText(str(self.recette))
-			self.sumDep.setText(self.depense)
-			self.sumAdd.setText(str(self.ajout))
-			
-			self.sumTotal.display(sum(self.regTotal) - int(self.depense))
-			self.actual = str(sum(self.regTotal) - int(self.depense))
-			self.actual = str(self.actual)	
-			
-		except:
-			self.messageFactory.raiseIndefinedExcept("au niveau de la caisse")
+		# except:
+			# self.messageFactory.raiseIndefinedExcept("au niveau de la caisse")
 		
 	def RegisterInit(self) :#SELECT AND TEST DAY REGSTER DATA to bind
 		
@@ -1388,8 +1398,7 @@ class RegisterCreatorDialog(QDialog, Ui_registerCreatorDialog):# EDIT : MODIF Pr
 		if self.sender() == self.editInit and self.sumInit.text() != "":
 			query.execute("UPDATE Register SET register_sum_init ={0} WHERE register_date ='{1}'".format(int(self.sumInit.text()),self.Date))
 			self.registerSum()
-			if self.sumInit.text() != "" :
-				self.messageFactory.raiseNoInt()
+			self.messageFactory.raiseAdder("Somme Initiale")
 				
 		if self.sender() == self.addAdd :
 			self.newDepot()
@@ -1564,6 +1573,7 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 		self.alertPr = AlertP()
 		self.receipt = Receipt()
 		self.register = RegisterCreatorDialog()
+		self.setting = SettingCreatorDialog()
 		
 		self.referenceSelector = ReferenceSelector()
 		self.society = self.referenceSelector.society 
@@ -1737,8 +1747,6 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 		name = str(self.sender().text())
 		if name != '':
 			
-			self.produit = self.produit + 1
-			self.viewProdNum.setText(str(self.produit))
 			query.execute('SELECT product_price,product_stock,product_date,product_category FROM Products WHERE product_name = "{0}"'.format(str(name)))
 			fetch=query.fetchall()
 			
@@ -1781,28 +1789,12 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 			conn.commit()
 			self.prodQnt.setText("")
             
-			# self.tableWidget.cellChanged.connect(self.QChanged) 
-
-            
-	# def QChanged(self):#CELL Qnt Changed
-        # ==========HOVER ONN TITLE
-		# rowPosition = self.tableWidget.rowCount()
-		# index = self.tableWidget.currentRow()
-
-		# q = self.tableWidget.item(index,2).text()  
-		# p = self.tableWidget.item(index,3).text()  
-        
-		# sender = self.sender()
-		# self.quantite = int(q)
-		# print(self.quantite)
+			self.Articles()
 			
 	def ButtonBC(self):#SLOT : ON CLICK BUTTON BARCODE, SELECTION, SETITEM TO TABLEWIDGET 
 		name = self.prodBC.text()
 		if name != '':
-			try:
-				self.produit = self.produit + 1
-				self.viewProdNum.setText(str(self.produit))
-				
+			try:			
 				query.execute('SELECT product_price,product_stock,product_date,product_name,product_BC,product_category FROM Products WHERE product_BC = "{0}"'.format(str(name)))
 				fetch=query.fetchall()
 				
@@ -1845,6 +1837,7 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 				self.prodBC.clear()
 				self.prodQnt.setText("")
 				conn.commit()
+				self.Articles()
 			except:
 				self.MF.raiseIndefinedExcept("Produit introuvable !")
 				self.viewProdNum.setText((str(int(self.viewProdNum.text()) - 1)))
@@ -1897,12 +1890,17 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 			self.prodName.clear()
 			self.prodQnt.setText("")
 			self.prodPrice.clear()
+			self.Articles()
 
 #===================================SLOTS
 	def ProdEdit(self):#SLOT : ProductCreatorDialog => prodEdit
-		dialog=QWidget()
-		dialog.ui=self.prodEdit
-		dialog.ui.exec_()
+		self.setting.selection()
+		if str(self.setting.user).strip("(',')") == "admin" :
+			dialog=QWidget()
+			dialog.ui=self.prodEdit
+			dialog.ui.exec_()
+		else :
+			self.MF.raiseNoRight()
 		
 	def MyProds(self):#SLOT : MyProductDialog => myProd
 		self.myProd.MyProdInit()
@@ -1912,16 +1910,25 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 	
 #==========RECEIPT 
 	def ReiceptFunc(self):#SLOT : Receipt => recette
-		self.receipt.MyProdInit()
-		dialog=QDialog()
-		dialog.ui = self.receipt
-		dialog.ui.exec_()
+		self.setting.selection()
+		if str(self.setting.user).strip("(',')") == "admin" :
+			self.receipt.MyProdInit()
+			dialog=QDialog()
+			dialog.ui = self.receipt
+			dialog.ui.exec_()
+		else :
+			self.MF.raiseNoRight()
+    
 #==========REGISTER 
 	def RegisterFunc(self):#SLOT : Receipt => recette
-		self.register.registerSum()
-		dialog=QDialog()
-		dialog.ui = self.register
-		dialog.ui.exec_()
+		self.setting.selection()
+		if str(self.setting.user).strip("(',')") == "admin" :
+			self.register.registerSum()
+			dialog=QDialog()
+			dialog.ui = self.register
+			dialog.ui.exec_()
+		else :
+			self.MF.raiseNoRight()
 
 	def alerteStockFunc(self):#SLOT : Alert stock
 		self.alertSt.InitAlert()
@@ -1962,9 +1969,10 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 					b=int(self.discount.text())
 					c = c + b
 				
-				self.payBack.setText(str(c))
+				self.payBack.setText(str(c))						
 			except:
 				pass
+			self.Articles()
 		except:
 			pass
 
@@ -1996,8 +2004,12 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 		self.payBack.setText("")
 		if self.prodQnt.text() != "":
 			self.prodQnt.setText("")
+            
+		self.Articles()
 			 
 	def ValidFunction(self):#SLOT : VALIDATION, DISPLAY MONEY, set TOTAL LIST TO 0, TABLE WIDGET INIT, REF +1,
+        #Refresh username :
+		self.setting.selection()
 		if self.viewProdNum.text() != "" and self.viewProdNum.text() != "0":
 			self.viewTotal.display(0)
 			a=self.received.text()
@@ -2054,8 +2066,12 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 					
 				p = TICKET.add_paragraph(" ___________________________________________________________________________________________________ ")
 				try :	
-					p = TICKET.add_heading("\t\t\t\tTotal à payer : "+str(sum(self.a_list))+" DA ", level=2)
-					p.bold = True
+					if self.discount.text() != "" :
+						p = TICKET.add_heading("\t\t\t\tTotal à payer : "+str(sum(self.a_list) - int(self.discount.text()))+" DA ", level=2)
+						p.bold = True
+					else :
+						p = TICKET.add_heading("\t\t\t\tTotal à payer : "+str(sum(self.a_list))+" DA ", level=2)
+						p.bold = True
 				except :
 					return 0
 				
@@ -2070,7 +2086,7 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 							p = TICKET.add_paragraph("\t\t\t\tReçu : "+self.received.text()+" DA, Rendu : "+str(c)+" DA, Remise : 0 DA")
 					except:
 						pass
-				p = TICKET.add_paragraph("\t\t\t\tCaissier : Annonyme")
+				p = TICKET.add_paragraph("\t\t\t\tCaissier : "+str(self.setting.user))
 				p = TICKET.add_paragraph("\t\t\t\tNbr de Produits : "+str(self.produit)+".")
 				
 				p = TICKET.add_paragraph(" ___________________________________________________________________________________________________ ")
@@ -2080,7 +2096,7 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 
 				
 				TICKET.save('DOCUMENTS/TICKETS/TICKET-'+str(self.ref)+"_"+self.localDate+'.docx' )
-				os.startfile('DOCUMENTS\TICKETS\TICKET-'+str(self.ref)+"_"+self.localDate+'.docx' , 'print')
+				# os.startfile('DOCUMENTS\TICKETS\TICKET-'+str(self.ref)+"_"+self.localDate+'.docx' , 'print')
 			except :
 				pass	
 			
@@ -2103,9 +2119,6 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 			if self.discount.text() != "" and self.discount.text() !='0' :
 				query.execute("INSERT INTO Discount (disc_date,disc_ref, disc_value) VALUES ('{0}','{1}','{2}')"\
 				.format(self.Date,int(self.ref),int(self.discount.text())))
-				#=============================================REGISTER DEPENSE BINDING
-				query.execute("INSERT INTO Register_dep (dep_date, dep_type, dep_description,dep_value) VALUES ('"\
-				+self.Date+"','Remise','Remise ticket :"+str(self.ref)+"','"+self.discount.text()+"')")	
 				
 			conn.commit()
 				
@@ -2139,6 +2152,24 @@ class ProductWidget(QWidget, Ui_ProductWidget):
 				self.payBack.setText(str(c))
 			except:
 				pass
+                
+	def Articles(self):
+		rowCount = self.tableWidget.rowCount()
+		# print(rowCount)
+		index = self.tableWidget.currentRow()
+		i=0
+		article = 0
+		while i<int(rowCount) :  
+			q = self.tableWidget.item(i,2).text() 
+			if int(q) > 0:   
+				article += int(q)
+				self.viewProdNum.setText(str(article))
+			else:
+				self.viewProdNum.setText("0")
+			i+=1
+            
+		if article <= 0:   
+			self.viewProdNum.setText("0")
 			
 #============================================================================================================HOMEPAGE 			
 qtHome= "DESIGN/WIDGETS/HomeWidget.ui"
@@ -2154,6 +2185,7 @@ class HomePage(QWidget, Ui_HomeWidget):#CONFIRM : VALID DIALOG ON VLDButton CLIC
 		self.sellPoint = ProductWidget()
 		self.connecter = ConnectDialog()
 		self.settings = SettingCreatorDialog()
+        
 				
 qtCreatorFile = "DESIGN/WIDGETS/mainWindow.ui" # Enter file here.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
@@ -2184,6 +2216,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 	def initUi(self):
 		self.dockWidget.setWidget(self.home)
 		self.setCentralWidget(self.dockWidget)
+		self.settings.selection()
+		self.home.who.setText(str(self.settings.user).strip("(',')"))
 		
 	def homeSignals(self):
 		
@@ -2199,36 +2233,51 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 		
 		#PONTSELL SIGNALS
 		self.sellPoint.homePage.clicked.connect(self.homeSlots)
+        
+		self.home.disconnect.clicked.connect(self.homeSlots)
+		self.home.powerOff.clicked.connect(self.homeSlots)
 		
 		#SETTINGS SIGNALS
-		self.settings.setOK.clicked.connect(self.homeSlots)
 		self.settings.setAnnuler.clicked.connect(self.homeSlots)
 		self.settings.logDel.clicked.connect(self.homeSlots)
 		self.settings.disconnect.clicked.connect(self.homeSlots)
 		
 		#CONNECTER SIGNALS
 		self.connecter.connOk.clicked.connect(self.homeSlots)
+		self.connecter.powerOff.clicked.connect(self.homeSlots)
 		
 		#DEV SIGNALS
 		self.dev.back.clicked.connect(self.homeSlots)
 		
 	def homeSlots(self) :
 		sender = self.sender()
+		self.settings.selection()
 		
 		if sender == self.home.feature_1 :
+			self.sellPoint.who.setText(str(self.settings.user).strip("(',')"))
 			self.dockWidget.setWidget(self.sellPoint)
 		
 		if sender == self.home.feature_2 :
-			self.register.registerSum()
-			dialog=QDialog()
-			dialog.ui = self.register
-			dialog.ui.exec_()
+			if str(self.settings.user).strip("(',')") == "admin" :
+				self.register.registerSum()
+				dialog=QDialog()
+				dialog.ui = self.register
+				dialog.ui.exec_()
+			else :
+				self.MF.raiseNoRight()
 		
 		if sender == self.home.feature_3:
+			self.settings.selection()
+			self.dev.who.setText(str(self.settings.user).strip("(',')"))
 			self.dockWidget.setWidget(self.dev)
 		
 		if sender == self.home.feature_4:
-			self.dockWidget.setWidget(self.settings)
+			self.settings.selection()
+			self.settings.who.setText(str(self.settings.user).strip("(',')"))
+			if str(self.settings.user).strip("(',')") == "admin" :
+				self.dockWidget.setWidget(self.settings)
+			else :
+				self.MF.raiseNoRight()
 		
 		if sender == self.home.feature_5 or  sender == self.home.feature_6 or  sender == self.home.feature_7 or  sender == self.home.feature_8 :
 			self.MF.raiseNoPack()
@@ -2237,7 +2286,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 			self.dockWidget.setWidget(self.home)
 			
 		#SETTINGS SLOTS
-		if sender == self.settings.setOK or sender == self.settings.setAnnuler :
+		if sender == self.settings.setAnnuler :
 			self.dockWidget.setWidget(self.home)
 			self.settings.selection()
 			
@@ -2245,16 +2294,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 			self.connecter.show()
 			self.close()
 			
-		if sender == self.settings.disconnect :
+		if sender == self.settings.disconnect or sender == self.home.disconnect :
 			self.connecter.show()
 			self.close()
 			
 		if sender == self.connecter.connOk :
 			self.connecter.login(self)
+			self.dockWidget.setWidget(self.home)
 			self.settings.selection()
 			
 		if sender == self.dev.back :
 			self.dockWidget.setWidget(self.home)
+			
+		if sender == self.home.powerOff :
+			self.close()
+			
+		if sender == self.connecter.powerOff :
+			self.connecter.close()
+                
+		self.home.who.setText(str(self.settings.user).strip("(',')"))
 		
 	def toolBarCalls(self):	
 		if self.sender() == self.HomeAct :
@@ -2279,10 +2337,13 @@ class Opener(QDialog):
 		
 		self.connecter.show()
 		self.connecter.connOk.clicked.connect(self.loginSlot)
+		self.connecter.powerOff.clicked.connect(self.Closer)
 		
 	def loginSlot(self):
 		if self.sender() == self.connecter.connOk :
 			self.connecter.login(self.window)#
+	def Closer(self):
+		self.connecter.close()
 #============================================================================================================END OPENER
 	
 if __name__ == "__main__":

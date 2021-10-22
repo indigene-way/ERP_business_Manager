@@ -171,7 +171,7 @@ QPushButton:focus{color:#00ea00}</string>
        <widget class="QPushButton" name="today">
         <property name="geometry">
          <rect>
-          <x>720</x>
+          <x>350</x>
           <y>440</y>
           <width>101</width>
           <height>35</height>
@@ -207,8 +207,8 @@ QPushButton:focus{color:#00ea00}</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton{background-color:white; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:#a4a5a7;border: 0px solid #ecf0f5}
+         <string notr="true">QPushButton{background-color:white; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{background-color:white;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
         </property>
         <property name="text">
@@ -260,10 +260,10 @@ QPushButton:focus{color:#00ea00}</string>
          </size>
         </property>
        </widget>
-       <widget class="QPushButton" name="discount">
+       <widget class="QPushButton" name="profit">
         <property name="geometry">
          <rect>
-          <x>610</x>
+          <x>720</x>
           <y>440</y>
           <width>101</width>
           <height>35</height>
@@ -299,16 +299,16 @@ QPushButton:focus{color:#00ea00}</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton{background-color:white; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:#a4a5a7;border: 0px solid #ecf0f5}
+         <string notr="true">QPushButton{background-color:white; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{background-color:white;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
         </property>
         <property name="text">
-         <string>Remises</string>
+         <string>Benéfices</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../IMAGES/Icons/discount.png</normaloff>../../IMAGES/Icons/discount.png</iconset>
+          <normaloff>../../IMAGES/Icons/profit.png</normaloff>../../IMAGES/Icons/profit.png</iconset>
         </property>
         <property name="iconSize">
          <size>

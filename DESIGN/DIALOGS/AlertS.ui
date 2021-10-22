@@ -68,8 +68,8 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton{background-color:white; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:#a4a5a7;border: 0px solid #ecf0f5}
+    <string notr="true">QPushButton{background-color:white; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{background-color:white;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
    </property>
    <property name="text">

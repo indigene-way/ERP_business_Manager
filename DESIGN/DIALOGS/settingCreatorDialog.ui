@@ -16,9 +16,9 @@
   <widget class="QFrame" name="frame_12">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>25</y>
-     <width>925</width>
+     <x>0</x>
+     <y>5</y>
+     <width>1371</width>
      <height>100</height>
     </rect>
    </property>
@@ -36,113 +36,12 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="title_24">
+   <widget class="QPushButton" name="disconnect">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>925</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Rockwell</family>
-      <pointsize>9</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:#3c80e5;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QFrame" name="frame">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>125</y>
-     <width>925</width>
-     <height>500</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background:#f9fafc;</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QLabel" name="title_21">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>925</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semibold</family>
-      <pointsize>11</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:#f9fafc;color:#c5c6c8;</string>
-    </property>
-    <property name="text">
-     <string>Gestion du systeme</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="who">
-    <property name="geometry">
-     <rect>
-      <x>305</x>
-      <y>430</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>8</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-      <underline>false</underline>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:white;color:green;padding-left:10px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="setOK">
-    <property name="geometry">
-     <rect>
-      <x>675</x>
-      <y>430</y>
-      <width>101</width>
+      <x>850</x>
+      <y>60</y>
+      <width>141</width>
       <height>35</height>
      </rect>
     </property>
@@ -167,6 +66,119 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="toolTip">
+     <string>Changer de compte</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+QPushButton:hover{background-color:#3c80e5;color:white;border: 0px solid #ecf0f5}
+QPushButton:focus{color:#00ea00}</string>
+    </property>
+    <property name="text">
+     <string>Changer de compte</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../IMAGES/Icons/disconnect.png</normaloff>../../IMAGES/Icons/disconnect.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>21</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setAnnuler">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>10</y>
+      <width>141</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Changer de compte</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+</string>
+    </property>
+    <property name="text">
+     <string>Acceuil</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../IMAGES/Icons/index.png</normaloff>../../IMAGES/Icons/index.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>21</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="who">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>60</y>
+      <width>251</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="toolTip">
      <string>Valider</string>
     </property>
     <property name="statusTip">
@@ -176,16 +188,15 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton{background-color:white; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:white;border: 0px solid #ecf0f5}
-QPushButton:focus{color:#00ea00}</string>
+     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+</string>
     </property>
     <property name="text">
-     <string>Valider</string>
+     <string/>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../../IMAGES/Icons/vérifié (1).png</normaloff>../../IMAGES/Icons/vérifié (1).png</iconset>
+      <normaloff>../../IMAGES/Icons/user.png</normaloff>../../IMAGES/Icons/user.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -194,11 +205,113 @@ QPushButton:focus{color:#00ea00}</string>
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="who_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>301</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Historic</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Valider</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+</string>
+    </property>
+    <property name="text">
+     <string>Parametres : Comptes et Commerce</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../IMAGES/Icons/set.png</normaloff>../../IMAGES/Icons/set.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>21</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>105</y>
+     <width>1371</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:#f9fafc;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="title_21">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>1371</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#f9fafc;color:#c5c6c8;</string>
+    </property>
+    <property name="text">
+     <string>Gestion du systeme</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <widget class="QTabWidget" name="numDelComboBox">
     <property name="geometry">
      <rect>
-      <x>145</x>
-      <y>65</y>
+      <x>360</x>
+      <y>50</y>
       <width>630</width>
       <height>352</height>
      </rect>
@@ -1107,147 +1220,6 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      </widget>
     </widget>
    </widget>
-   <widget class="QLabel" name="title_17">
-    <property name="geometry">
-     <rect>
-      <x>145</x>
-      <y>430</y>
-      <width>161</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>9</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:white;color:#a4a5a7;</string>
-    </property>
-    <property name="text">
-     <string>Connecté en tant que :</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="setAnnuler">
-    <property name="geometry">
-     <rect>
-      <x>780</x>
-      <y>20</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <pointsize>8</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>false</underline>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="toolTip">
-     <string>Valider</string>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{background-color:#f9fafc; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:#a4a5a7;border: 0px solid #ecf0f5}
-QPushButton:focus{color:#00ea00}</string>
-    </property>
-    <property name="text">
-     <string>Retour à l'acceuil</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../IMAGES/Icons/homepage.png</normaloff>../../IMAGES/Icons/homepage.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>21</width>
-      <height>21</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="disconnect">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>430</y>
-      <width>141</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <pointsize>8</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>false</underline>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="toolTip">
-     <string>Valider</string>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{background-color:#f9fafc; color : #a4a5a7; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{background-color:white;color:#a4a5a7;border: 0px solid #ecf0f5}
-QPushButton:focus{color:#00ea00}</string>
-    </property>
-    <property name="text">
-     <string>Changer de compte</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../IMAGES/Icons/disconnecte_blue.png</normaloff>../../IMAGES/Icons/disconnecte_blue.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>21</width>
-      <height>21</height>
-     </size>
-    </property>
-   </widget>
   </widget>
  </widget>
  <tabstops>
@@ -1261,7 +1233,6 @@ QPushButton:focus{color:#00ea00}</string>
   <tabstop>delSetComboBox</tabstop>
   <tabstop>delUserName</tabstop>
   <tabstop>logDel</tabstop>
-  <tabstop>setOK</tabstop>
   <tabstop>pushButton_2</tabstop>
   <tabstop>pushButton_4</tabstop>
   <tabstop>pushButton_5</tabstop>
