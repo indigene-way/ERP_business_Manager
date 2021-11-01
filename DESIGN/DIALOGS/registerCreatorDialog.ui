@@ -945,64 +945,6 @@ border: 1px solid  #808080;
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="registerPrint">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>30</y>
-      <width>121</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <pointsize>8</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-      <underline>false</underline>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="toolTip">
-     <string>Imprimer ue fiche détaillée</string>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
-QPushButton:hover{color:orange;}
-QPushButton:focus{color:#00ea00}
-</string>
-    </property>
-    <property name="text">
-     <string>Fiche de caisse</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../IMAGES/Icons/printCaisse.png</normaloff>../../IMAGES/Icons/printCaisse.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>21</width>
-      <height>21</height>
-     </size>
-    </property>
-   </widget>
   </widget>
  </widget>
  <tabstops>

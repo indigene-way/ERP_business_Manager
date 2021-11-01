@@ -45,7 +45,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="elideMode">
     <enum>Qt::ElideMiddle</enum>
@@ -425,7 +425,7 @@ border: 0px solid  #808080;</string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Nom du produit</string>
+      <string>Nom de l'article</string>
      </property>
     </widget>
     <widget class="QDateEdit" name="newProdDateBC">
@@ -492,7 +492,7 @@ border: 0px solid  #808080;</string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Code bar du produit</string>
+      <string>Code bar de l'article</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="newProdStocMinBC">
@@ -584,7 +584,7 @@ border: 0px solid  #808080;</string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Stock du produit</string>
+      <string>Stock de l'article</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="newProdPriceBC">
@@ -592,7 +592,7 @@ border: 0px solid  #808080;</string>
       <rect>
        <x>100</x>
        <y>70</y>
-       <width>300</width>
+       <width>131</width>
        <height>30</height>
       </rect>
      </property>
@@ -611,7 +611,7 @@ border: 0px solid  #808080;</string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Prix du produit</string>
+      <string>Prix de vente </string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_7">
@@ -734,6 +734,53 @@ border: 0px solid  #808080;</string>
        <normaloff>../../IMAGES/Icons/stock.png</normaloff>../../IMAGES/Icons/stock.png</iconset>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="geometry">
+      <rect>
+       <x>235</x>
+       <y>70</y>
+       <width>30</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#e8ecf2; color : #a4a5a7; border: 0px solid #000028 ;  text-align:center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../IMAGES/Icons/price.png</normaloff>../../IMAGES/Icons/price.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="newBCPrice_buy">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>70</y>
+       <width>131</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#e8ecf2;color:#000028; border:0px solid #3c80e5 ;
+border: 0px solid  #808080;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Prix d'achat</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_5">
     <attribute name="title">
@@ -744,7 +791,7 @@ border: 0px solid  #808080;</string>
       <rect>
        <x>100</x>
        <y>120</y>
-       <width>300</width>
+       <width>131</width>
        <height>30</height>
       </rect>
      </property>
@@ -763,7 +810,7 @@ border: 0px </string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Prix du produit</string>
+      <string>Prix de l'article</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="newProdStock">
@@ -790,7 +837,7 @@ border: 0px </string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Stock du produit</string>
+      <string>Stock de l'article</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="newProdName">
@@ -817,7 +864,7 @@ border: 0px </string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Nom du produit</string>
+      <string>Nom de l'article</string>
      </property>
     </widget>
     <widget class="QDateEdit" name="newProdDate">
@@ -1073,6 +1120,53 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
        <normaloff>../../IMAGES/Icons/stock.png</normaloff>../../IMAGES/Icons/stock.png</iconset>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_22">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>120</y>
+       <width>30</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#e8ecf2; color : #a4a5a7; border: 0px solid #000028 ;  text-align:center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../IMAGES/Icons/price.png</normaloff>../../IMAGES/Icons/price.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="newPrice_buy">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>120</y>
+       <width>131</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#e8ecf2;color:#000028; border:0px solid #3c80e5 ;
+border: 0px solid  #808080;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Prix d'achat</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="productTab2">
     <attribute name="title">
@@ -1237,7 +1331,7 @@ border: 0px solid  #808080;</string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Code bar du produit à modifier</string>
+      <string>Code bar de l'article à modifier</string>
      </property>
     </widget>
     <widget class="QPushButton" name="modifPBC">
@@ -1743,7 +1837,7 @@ border: 0px solid  #808080;</string>
       <string/>
      </property>
      <property name="placeholderText">
-      <string>Code bar du produit à supprimer</string>
+      <string>Code bar de l'article à supprimer</string>
      </property>
      <property name="clearButtonEnabled">
       <bool>true</bool>
@@ -1957,7 +2051,7 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <string notr="true">QPushButton{background-color:#3c80e5; color : white; border: 0px solid #2f4f4f  ; border-radius: 0.5px; text-align:center;}</string>
     </property>
     <property name="text">
-     <string>Gestion des catégories et produits</string>
+     <string>Gestion des catégories et Articles</string>
     </property>
     <property name="icon">
      <iconset>
@@ -1976,11 +2070,12 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
   <tabstop>Menu</tabstop>
   <tabstop>productTabWidget</tabstop>
   <tabstop>addNewCat</tabstop>
-  <tabstop>addCat</tabstop>
   <tabstop>delCatName</tabstop>
+  <tabstop>addCat</tabstop>
   <tabstop>delCat</tabstop>
   <tabstop>newProdNameBC</tabstop>
   <tabstop>newProdPriceBC</tabstop>
+  <tabstop>newBCPrice_buy</tabstop>
   <tabstop>newProdBC</tabstop>
   <tabstop>newProdStockBC</tabstop>
   <tabstop>newProdStocMinBC</tabstop>
@@ -1989,6 +2084,7 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
   <tabstop>addCatName</tabstop>
   <tabstop>newProdName</tabstop>
   <tabstop>newProdPrice</tabstop>
+  <tabstop>newPrice_buy</tabstop>
   <tabstop>newProdStock</tabstop>
   <tabstop>newProdStockMin</tabstop>
   <tabstop>newProdDate</tabstop>
@@ -2011,6 +2107,38 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
   <tabstop>delProdCat</tabstop>
   <tabstop>delProdName</tabstop>
   <tabstop>delProd</tabstop>
+  <tabstop>pushButton_7</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>pushButton_10</tabstop>
+  <tabstop>pushButton_11</tabstop>
+  <tabstop>pushButton_13</tabstop>
+  <tabstop>pushButton_14</tabstop>
+  <tabstop>pushButton_15</tabstop>
+  <tabstop>pushButton_16</tabstop>
+  <tabstop>pushButton_18</tabstop>
+  <tabstop>pushButton_19</tabstop>
+  <tabstop>pushButton_20</tabstop>
+  <tabstop>pushButton_21</tabstop>
+  <tabstop>pushButton_24</tabstop>
+  <tabstop>pushButton_17</tabstop>
+  <tabstop>pushButton_26</tabstop>
+  <tabstop>pushButton_27</tabstop>
+  <tabstop>pushButton_28</tabstop>
+  <tabstop>pushButton_29</tabstop>
+  <tabstop>pushButton_30</tabstop>
+  <tabstop>pushButton_33</tabstop>
+  <tabstop>pushButton_34</tabstop>
+  <tabstop>pushButton_35</tabstop>
+  <tabstop>pushButton_36</tabstop>
+  <tabstop>pushButton_12</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_22</tabstop>
+  <tabstop>pushButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -2102,7 +2102,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../IMAGES/Icons/alert-red.png</normaloff>../../IMAGES/Icons/alert-red.png</iconset>
+       <normaloff>../../IMAGES/Icons/alert.png</normaloff>../../IMAGES/Icons/alert.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -2595,7 +2595,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
         <x>0</x>
         <y>0</y>
         <width>201</width>
-        <height>21</height>
+        <height>25</height>
        </rect>
       </property>
       <property name="font">
@@ -2658,9 +2658,9 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QPushButton" name="addProdBC">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>105</y>
-        <width>71</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>

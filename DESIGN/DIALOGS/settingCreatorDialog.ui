@@ -40,7 +40,7 @@
     <property name="geometry">
      <rect>
       <x>850</x>
-      <y>60</y>
+      <y>10</y>
       <width>141</width>
       <height>35</height>
      </rect>
@@ -97,7 +97,7 @@ QPushButton:focus{color:#00ea00}</string>
     <property name="geometry">
      <rect>
       <x>850</x>
-      <y>10</y>
+      <y>60</y>
       <width>141</width>
       <height>35</height>
      </rect>
@@ -259,6 +259,22 @@ QPushButton:focus{color:#00ea00}</string>
       <width>21</width>
       <height>21</height>
      </size>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>50</y>
+      <width>630</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:white;color:white;</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>

@@ -603,7 +603,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       </font>
      </property>
      <property name="cursor">
-      <cursorShape>ArrowCursor</cursorShape>
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="toolTip">
       <string/>
@@ -663,7 +663,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>Votre pack ne contient pas cette rubrique</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -672,9 +672,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:white;text-align:center; color : #000028; border: 0px solid #000028;}
-QPushButton:hover{background-color:#287ee1;color:white;}
-QPushButton:focus{background-color:#287ee1;color:white;}</string>
+      <string notr="true">QPushButton{background-color:#f9fafc;text-align:center; color : #000028; border: 0px solid #000028;}</string>
      </property>
      <property name="text">
       <string/>
@@ -708,7 +706,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:white;color:#a4a5a7;</string>
+      <string notr="true">background:#f9fafc;color:#a4a5a7;</string>
      </property>
      <property name="text">
       <string>Fournisseurs</string>
@@ -747,7 +745,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>Votre pack ne contient pas cette rubrique</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -756,9 +754,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:white;text-align:center; color : #000028; border: 0px solid #000028;}
-QPushButton:hover{background-color:#287ee1;color:white;}
-QPushButton:focus{background-color:#287ee1;color:white;}</string>
+      <string notr="true">QPushButton{background-color:#f9fafc;text-align:center; color : #000028; border: 0px solid #000028;}</string>
      </property>
      <property name="text">
       <string/>
@@ -795,7 +791,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:white;color:#a4a5a7;</string>
+      <string notr="true">background:#f9fafc;color:#a4a5a7;</string>
      </property>
      <property name="text">
       <string>Statistiques</string>
@@ -822,7 +818,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:white;color:#a4a5a7;</string>
+      <string notr="true">background:#f9fafc;color:#a4a5a7;</string>
      </property>
      <property name="text">
       <string>Salarié(e)s</string>
@@ -861,7 +857,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <cursorShape>ArrowCursor</cursorShape>
      </property>
      <property name="toolTip">
-      <string/>
+      <string>Votre pack ne contient pas cette rubrique</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -870,9 +866,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:white;text-align:center; color : #000028; border: 0px solid #000028;}
-QPushButton:hover{background-color:#287ee1;color:white;}
-QPushButton:focus{background-color:#287ee1;color:white;}</string>
+      <string notr="true">QPushButton{background-color:#f9fafc;text-align:center; color : #000028; border: 0px solid #000028;}</string>
      </property>
      <property name="text">
       <string/>
@@ -918,8 +912,8 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
     <widget class="QPushButton" name="disconnect">
      <property name="geometry">
       <rect>
-       <x>850</x>
-       <y>60</y>
+       <x>1010</x>
+       <y>10</y>
        <width>141</width>
        <height>35</height>
       </rect>
@@ -954,7 +948,7 @@ QPushButton:focus{background-color:#287ee1;color:white;}</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:right; padding-left:10px;}
 QPushButton:hover{background-color:#3c80e5;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
      </property>
@@ -975,7 +969,7 @@ QPushButton:focus{color:#00ea00}</string>
     <widget class="QPushButton" name="who_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>70</x>
        <y>10</y>
        <width>251</width>
        <height>35</height>
@@ -1031,8 +1025,8 @@ QPushButton:focus{color:#00ea00}</string>
     <widget class="QPushButton" name="who">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>50</y>
+       <x>70</x>
+       <y>60</y>
        <width>251</width>
        <height>35</height>
       </rect>
@@ -1087,7 +1081,7 @@ QPushButton:focus{color:#00ea00}</string>
     <widget class="QPushButton" name="powerOff">
      <property name="geometry">
       <rect>
-       <x>850</x>
+       <x>1150</x>
        <y>10</y>
        <width>141</width>
        <height>35</height>
@@ -1123,7 +1117,7 @@ QPushButton:focus{color:#00ea00}</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:right; padding-left:10px;}
 QPushButton:hover{background-color:#3c80e5;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
      </property>
@@ -1139,6 +1133,22 @@ QPushButton:focus{color:#00ea00}</string>
        <width>21</width>
        <height>21</height>
       </size>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>50</y>
+       <width>1211</width>
+       <height>2</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:white;color:white;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </widget>
