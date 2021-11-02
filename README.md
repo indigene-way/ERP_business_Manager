@@ -1,4 +1,4 @@
-# MyERP MANAGER SYSTEM
+# ERP MANAGER SYSTEM
 An ERP shop manager system that provides all utilities needed to manager a small/medium business (Point of sell, register, accounting, stock, providers...), with barcode, products categories, manual data entry...  
 
 1- CONNEXION TO THE SYSTEM
