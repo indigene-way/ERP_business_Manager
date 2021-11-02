@@ -1,5 +1,6 @@
 # MyGrocery
-A Grocery shop manager system that provides all utilities needed to manager the shop (Point of sell, register, accounting, stock, providers...), with barcode, products categories, manual data entry...  
+An ERP shop manager system that provides all utilities needed to manager a small/medium business (Point of sell, register, accounting, stock, providers...), with barcode, products categories, manual data entry...  
+
 1- CONNEXION TO THE SYSTEM
 ![Co](https://user-images.githubusercontent.com/42687107/139700225-498195e6-a35f-411f-9e77-620690813dc4.png)
 
