@@ -24,17 +24,22 @@ An ERP shop manager system that provides all utilities needed to manager a small
   3.7- Expiration dates Alerts
 ![PS7](https://user-images.githubusercontent.com/42687107/139701658-4fa429ed-b200-498d-bdc1-3bda38058025.png)
 
-5- REGISTER MANAGEMENT
+4- REGISTER MANAGEMENT
 ![H2](https://user-images.githubusercontent.com/42687107/139702075-fb1e3d85-47e8-495b-a3f0-7a440326d868.png)
 ![Reg](https://user-images.githubusercontent.com/42687107/139700256-1928f9fb-10e3-4e5b-aa8b-63e224cc6de8.png)
 
-6- DEV INFOS
+5- DEV INFOS
 ![H3](https://user-images.githubusercontent.com/42687107/139702080-10432699-fef3-4e5a-a0c3-aad3a37e3802.png)
 ![dev](https://user-images.githubusercontent.com/42687107/139700264-38cbd50f-dfcc-4f67-b308-f8c11bdeaf3e.png)
 
-7- SETTINGS
+6- SETTINGS
 ![H4](https://user-images.githubusercontent.com/42687107/139702082-8c8f2c74-661e-4412-a983-2a01f1cb17d0.png)
 ![set](https://user-images.githubusercontent.com/42687107/139700277-025e1e59-1ad7-4d9e-a42f-9d1ba9d29785.png)
 
-8- ACCOUNTING MANAGEMENT
+7- ACCOUNTING MANAGEMENT
 ![H5](https://user-images.githubusercontent.com/42687107/139702448-491443ea-aad5-4959-bf34-b84dd0eeee2e.png)
+7.1-Sell view
+![Ac1](https://user-images.githubusercontent.com/42687107/139961510-7145397d-88d6-44b1-bb5a-b78cc11b1d57.png)
+7.2- Register view
+![Ac2](https://user-images.githubusercontent.com/42687107/139961545-670fc937-1b4b-40f4-a5d4-668ccf80f99e.png)
+
