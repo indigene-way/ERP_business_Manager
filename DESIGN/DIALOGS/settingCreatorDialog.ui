@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1371</width>
-    <height>751</height>
+    <width>1000</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>0</x>
      <y>5</y>
-     <width>1371</width>
+     <width>1000</width>
      <height>100</height>
     </rect>
    </property>
@@ -39,9 +39,9 @@
    <widget class="QPushButton" name="disconnect">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>780</x>
       <y>10</y>
-      <width>141</width>
+      <width>200</width>
       <height>35</height>
      </rect>
     </property>
@@ -88,17 +88,17 @@ QPushButton:focus{color:#00ea00}</string>
     </property>
     <property name="iconSize">
      <size>
-      <width>21</width>
-      <height>21</height>
+      <width>16</width>
+      <height>16</height>
      </size>
     </property>
    </widget>
    <widget class="QPushButton" name="setAnnuler">
     <property name="geometry">
      <rect>
-      <x>850</x>
+      <x>780</x>
       <y>60</y>
-      <width>141</width>
+      <width>200</width>
       <height>35</height>
      </rect>
     </property>
@@ -123,7 +123,7 @@ QPushButton:focus{color:#00ea00}</string>
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="toolTip">
-     <string>Changer de compte</string>
+     <string>Acceuil</string>
     </property>
     <property name="statusTip">
      <string/>
@@ -144,17 +144,20 @@ QPushButton:focus{color:#00ea00}</string>
     </property>
     <property name="iconSize">
      <size>
-      <width>21</width>
-      <height>21</height>
+      <width>16</width>
+      <height>16</height>
      </size>
+    </property>
+    <property name="shortcut">
+     <string>Backspace</string>
     </property>
    </widget>
    <widget class="QPushButton" name="who">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>40</x>
       <y>60</y>
-      <width>251</width>
+      <width>400</width>
       <height>35</height>
      </rect>
     </property>
@@ -178,8 +181,11 @@ QPushButton:focus{color:#00ea00}</string>
     <property name="cursor">
      <cursorShape>ArrowCursor</cursorShape>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="toolTip">
-     <string>Valider</string>
+     <string/>
     </property>
     <property name="statusTip">
      <string/>
@@ -200,17 +206,17 @@ QPushButton:focus{color:#00ea00}</string>
     </property>
     <property name="iconSize">
      <size>
-      <width>21</width>
-      <height>21</height>
+      <width>16</width>
+      <height>16</height>
      </size>
     </property>
    </widget>
    <widget class="QPushButton" name="who_2">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>40</x>
       <y>10</y>
-      <width>301</width>
+      <width>400</width>
       <height>35</height>
      </rect>
     </property>
@@ -223,7 +229,7 @@ QPushButton:focus{color:#00ea00}</string>
     <property name="font">
      <font>
       <family>Segoe UI Historic</family>
-      <pointsize>11</pointsize>
+      <pointsize>8</pointsize>
       <weight>50</weight>
       <italic>true</italic>
       <bold>false</bold>
@@ -234,8 +240,11 @@ QPushButton:focus{color:#00ea00}</string>
     <property name="cursor">
      <cursorShape>ArrowCursor</cursorShape>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="toolTip">
-     <string>Valider</string>
+     <string/>
     </property>
     <property name="statusTip">
      <string/>
@@ -256,17 +265,17 @@ QPushButton:focus{color:#00ea00}</string>
     </property>
     <property name="iconSize">
      <size>
-      <width>21</width>
-      <height>21</height>
+      <width>16</width>
+      <height>16</height>
      </size>
     </property>
    </widget>
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>360</x>
+      <x>50</x>
       <y>50</y>
-      <width>630</width>
+      <width>900</width>
       <height>2</height>
      </rect>
     </property>
@@ -283,8 +292,8 @@ QPushButton:focus{color:#00ea00}</string>
     <rect>
      <x>0</x>
      <y>105</y>
-     <width>1371</width>
-     <height>661</height>
+     <width>1000</width>
+     <height>595</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -296,41 +305,17 @@ QPushButton:focus{color:#00ea00}</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="title_21">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>1371</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semibold</family>
-      <pointsize>11</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background:#f9fafc;color:#c5c6c8;</string>
-    </property>
-    <property name="text">
-     <string>Gestion du systeme</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="numDelComboBox">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>50</y>
-      <width>630</width>
-      <height>352</height>
+      <x>10</x>
+      <y>10</y>
+      <width>980</width>
+      <height>471</height>
      </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -342,16 +327,16 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QLabel" name="userNbr">
       <property name="geometry">
        <rect>
-        <x>445</x>
-        <y>60</y>
-        <width>45</width>
-        <height>21</height>
+        <x>730</x>
+        <y>80</y>
+        <width>60</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>10</pointsize>
+        <pointsize>9</pointsize>
         <weight>75</weight>
         <italic>false</italic>
         <bold>true</bold>
@@ -371,10 +356,10 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QLineEdit" name="newUserName">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>95</y>
+        <x>240</x>
+        <y>130</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -402,11 +387,14 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>150</y>
+        <x>190</x>
+        <y>170</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -428,11 +416,14 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>95</y>
+        <x>190</x>
+        <y>130</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -454,10 +445,10 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QLineEdit" name="newPassWord">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>150</y>
+        <x>240</x>
+        <y>170</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -488,10 +479,10 @@ QPushButton:focus{color:#00ea00}</string>
      <widget class="QPushButton" name="logAdd">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>210</y>
-        <width>350</width>
-        <height>45</height>
+        <x>190</x>
+        <y>240</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -522,10 +513,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_9">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>60</y>
-        <width>300</width>
-        <height>21</height>
+        <x>190</x>
+        <y>80</y>
+        <width>530</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -535,6 +526,9 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
         <weight>50</weight>
         <bold>false</bold>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:#a4a5a7;</string>
@@ -549,19 +543,22 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_10">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>20</y>
-        <width>350</width>
-        <height>31</height>
+        <x>190</x>
+        <y>40</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>13</pointsize>
+        <pointsize>11</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background:white;color:#a4a5a7;</string>
@@ -581,10 +578,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QComboBox" name="modSetComboBox">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>90</y>
-        <width>301</width>
-        <height>21</height>
+        <x>240</x>
+        <y>120</y>
+        <width>300</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -602,10 +599,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="logModif">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>240</y>
-        <width>350</width>
-        <height>45</height>
+        <x>190</x>
+        <y>270</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -636,11 +633,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>180</y>
+        <x>190</x>
+        <y>210</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -662,16 +662,16 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_11">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>20</y>
-        <width>350</width>
-        <height>31</height>
+        <x>190</x>
+        <y>40</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>13</pointsize>
+        <pointsize>11</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -689,10 +689,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLineEdit" name="modPassWord">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>180</y>
+        <x>240</x>
+        <y>210</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -723,10 +723,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLineEdit" name="modUserName">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>125</y>
+        <x>240</x>
+        <y>170</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -754,11 +754,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>125</y>
+        <x>190</x>
+        <y>170</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -780,11 +783,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>90</y>
+        <x>190</x>
+        <y>120</y>
         <width>45</width>
-        <height>21</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:white;  border: 0px ;  text-align:center;</string>
@@ -806,10 +812,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_12">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>60</y>
-        <width>350</width>
-        <height>21</height>
+        <x>190</x>
+        <y>80</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -838,11 +844,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_6">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>90</y>
+        <x>190</x>
+        <y>120</y>
         <width>45</width>
-        <height>21</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:white;  border: 0px ;  text-align:center;</string>
@@ -864,10 +873,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="logDel">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>190</y>
-        <width>350</width>
-        <height>45</height>
+        <x>190</x>
+        <y>240</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -898,10 +907,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLineEdit" name="delUserName">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>125</y>
+        <x>240</x>
+        <y>170</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -929,10 +938,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QComboBox" name="delSetComboBox">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>90</y>
+        <x>240</x>
+        <y>120</y>
         <width>301</width>
-        <height>21</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -950,11 +959,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_7">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>125</y>
+        <x>190</x>
+        <y>170</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -976,16 +988,16 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_13">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>20</y>
-        <width>350</width>
-        <height>31</height>
+        <x>190</x>
+        <y>40</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>13</pointsize>
+        <pointsize>11</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -1003,10 +1015,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_14">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>60</y>
-        <width>350</width>
-        <height>21</height>
+        <x>190</x>
+        <y>80</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -1035,10 +1047,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="settingInfo">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>210</y>
-        <width>350</width>
-        <height>45</height>
+        <x>190</x>
+        <y>240</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -1069,11 +1081,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_8">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>95</y>
+        <x>190</x>
+        <y>130</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -1095,16 +1110,16 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_15">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>20</y>
-        <width>350</width>
-        <height>31</height>
+        <x>190</x>
+        <y>40</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Arial</family>
-        <pointsize>13</pointsize>
+        <pointsize>11</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -1122,10 +1137,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLineEdit" name="societyName">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>95</y>
+        <x>240</x>
+        <y>130</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -1153,10 +1168,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLabel" name="title_16">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>60</y>
-        <width>350</width>
-        <height>21</height>
+        <x>190</x>
+        <y>80</y>
+        <width>600</width>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -1180,11 +1195,14 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QPushButton" name="pushButton_9">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>150</y>
+        <x>190</x>
+        <y>170</y>
         <width>45</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -1206,10 +1224,10 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <widget class="QLineEdit" name="societyNumber">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>150</y>
+        <x>240</x>
+        <y>170</y>
         <width>300</width>
-        <height>45</height>
+        <height>35</height>
        </rect>
       </property>
       <property name="font">
@@ -1239,6 +1257,8 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
   </widget>
  </widget>
  <tabstops>
+  <tabstop>disconnect</tabstop>
+  <tabstop>setAnnuler</tabstop>
   <tabstop>newUserName</tabstop>
   <tabstop>newPassWord</tabstop>
   <tabstop>logAdd</tabstop>
@@ -1249,18 +1269,9 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
   <tabstop>delSetComboBox</tabstop>
   <tabstop>delUserName</tabstop>
   <tabstop>logDel</tabstop>
-  <tabstop>pushButton_2</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>pushButton_5</tabstop>
-  <tabstop>pushButton_6</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>numDelComboBox</tabstop>
-  <tabstop>pushButton_7</tabstop>
-  <tabstop>settingInfo</tabstop>
-  <tabstop>pushButton_8</tabstop>
   <tabstop>societyName</tabstop>
-  <tabstop>pushButton_9</tabstop>
+  <tabstop>societyNumber</tabstop>
+  <tabstop>settingInfo</tabstop>
  </tabstops>
  <resources/>
  <connections/>

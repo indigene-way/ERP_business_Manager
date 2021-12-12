@@ -28,167 +28,6 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QFrame" name="frame_16">
-    <property name="geometry">
-     <rect>
-      <x>970</x>
-      <y>825</y>
-      <width>80</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#b81d47; border:0px solid black;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QPushButton" name="pushButton_31">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>40</y>
-       <width>71</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Rockwell</family>
-       <pointsize>9</pointsize>
-      </font>
-     </property>
-     <property name="toolTip">
-      <string/>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color :#b81d47;color:#000028; border:0px solid black;</string>
-     </property>
-     <property name="text">
-      <string>Produits</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../OLD/IMAGES/Icons/files-and-folders.png</normaloff>../../OLD/IMAGES/Icons/files-and-folders.png</iconset>
-     </property>
-    </widget>
-    <widget class="QLabel" name="viewProdNum_2">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>40</y>
-       <width>71</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="font">
-      <font>
-       <family>Rockwell</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="toolTip">
-      <string>Nombre de produits dans le panier </string>
-     </property>
-     <property name="statusTip">
-      <string/>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color :#b81d47;color:#000028; border:0px solid black;</string>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_32">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>10</y>
-       <width>71</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Rockwell</family>
-       <pointsize>9</pointsize>
-      </font>
-     </property>
-     <property name="toolTip">
-      <string/>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color :#b81d47;color:#000028; border:0px solid black;</string>
-     </property>
-     <property name="text">
-      <string>Tickets </string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../OLD/IMAGES/ValidationButton/list.png</normaloff>../../OLD/IMAGES/ValidationButton/list.png</iconset>
-     </property>
-    </widget>
-    <widget class="QLabel" name="refNum_2">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>10</y>
-       <width>71</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="font">
-      <font>
-       <family>Rockwell</family>
-       <pointsize>10</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="toolTip">
-      <string>Nombre de commandes Validées</string>
-     </property>
-     <property name="statusTip">
-      <string/>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color :#b81d47;color:#000028; border:0px solid black;</string>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
@@ -236,6 +75,7 @@
       </property>
       <property name="font">
        <font>
+        <pointsize>7</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -270,6 +110,7 @@
       </property>
       <property name="font">
        <font>
+        <pointsize>7</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -299,6 +140,9 @@
         <height>45</height>
        </rect>
       </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
       </property>
@@ -324,6 +168,9 @@
         <width>45</width>
         <height>45</height>
        </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#dadfe6;  border: 0px ;  text-align:center;</string>
@@ -708,7 +555,7 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
       <rect>
        <x>430</x>
        <y>10</y>
-       <width>301</width>
+       <width>351</width>
        <height>35</height>
       </rect>
      </property>
@@ -732,8 +579,11 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
      <property name="cursor">
       <cursorShape>ArrowCursor</cursorShape>
      </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
      <property name="toolTip">
-      <string>Valider</string>
+      <string/>
      </property>
      <property name="statusTip">
       <string/>
@@ -762,9 +612,9 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
     <widget class="QPushButton" name="powerOff">
      <property name="geometry">
       <rect>
-       <x>820</x>
+       <x>780</x>
        <y>10</y>
-       <width>141</width>
+       <width>171</width>
        <height>35</height>
       </rect>
      </property>
@@ -798,7 +648,7 @@ QPushButton:focus{background-color:#78d700;color:white};</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:left; padding-left:10px;}
+      <string notr="true">QPushButton{background-color:#3c80e5; color : orange; border: 0px solid #000028 ;  text-align:right;}
 QPushButton:hover{background-color:#3c80e5;color:white;border: 0px solid #ecf0f5}
 QPushButton:focus{color:#00ea00}</string>
      </property>
@@ -838,12 +688,10 @@ QPushButton:focus{color:#00ea00}</string>
  <tabstops>
   <tabstop>userName</tabstop>
   <tabstop>userPassword</tabstop>
+  <tabstop>viewPW</tabstop>
   <tabstop>connOk</tabstop>
   <tabstop>disconnect</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButton_2</tabstop>
-  <tabstop>pushButton_32</tabstop>
-  <tabstop>pushButton_31</tabstop>
+  <tabstop>powerOff</tabstop>
  </tabstops>
  <resources/>
  <connections/>
